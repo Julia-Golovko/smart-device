@@ -1,3 +1,15 @@
+@mixin fonts($font-family, $name, $weight) {
+  @font-face {
+    font-style: normal;
+    font-weight: $weight;
+    font-family: #{$font-family}, "Arial", sans-serif;
+
+    font-display: swap;
+    src: url("../../fonts/#{$name}.woff2") format("woff2")
+      url("../../fonts/#{$name}.woff") format("woff");
+  }
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
@@ -37,6 +49,18 @@
 }
 
 // Desktop first
+
+@mixin vp-tablet {
+  @media (max-width: (1219px)) {
+    @content;
+  }
+}
+
+@mixin vp-mobile {
+  @media (max-width: (767px)) {
+    @content;
+  }
+}
 
 @mixin vp-1919 {
   @media (max-width: ($vp-1920 - 1px)) {

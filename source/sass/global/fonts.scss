@@ -1,19 +1,5 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
+@include fonts("RobotoCondensed", "RobotoCondensed-Regular", 400);
+@include fonts("RobotoCondensed", "RobotoCondensed-Bold", 700);
+@include fonts("PTMono", "PTMono-Regular", 400);
 
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2");
-// }
 
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "";
-
-  font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2");
-}
