@@ -1,0 +1,91 @@
+.main-screen {
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) no-repeat;
+  background-image: url("../../img/background-desktop@1x.webp"), url("../../img/background-desktop@1x.jpg");
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background-desktop@2x.webp"), url("../../img/background-desktop@2x.jpg");
+  }
+
+  @include vp-tablet {
+    background-image: url("../../img/background-tablet@1x.webp"), url("../../img/background-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background-tablet@2x.webp"), url("../../img/background-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-mobile {
+    background-image: url("../../img/background-mobile@1x.webp"), url("../../img/background-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background-mobile@2x.webp"), url("../../img/background-mobile@2x.jpg");
+    }
+  }
+}
+
+.main-screen__wrapper {
+  width: max-content;
+  padding: 305px 0 280px 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include vp-tablet {
+    padding: 180px 0 205px 40px;
+    gap: 20px;
+  }
+
+  @include vp-tablet {
+    padding: 150px 15px 190px 15px;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+.main-screen__desc {
+  font-family: "PTMono", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: $secondary-color;
+  max-width: 685px;
+
+  @include vp-tablet {
+    max-width: 670px;
+  }
+
+  @include vp-mobile {
+    max-width: 271px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.main-screen__button {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px 25px;
+  background-color: $other-color;
+  width: max-content;
+  border: none;
+
+  @include vp-tablet {
+    margin-left: 45px;
+    margin-top: 30px;
+  }
+
+  @include vp-mobile {
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 0;
+  }
+}
+
+//.main-screen__title {
+//  @include vp-mobile {
+//    width: 270px;
+//  }
+//}

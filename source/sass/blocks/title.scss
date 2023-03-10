@@ -1,0 +1,32 @@
+.title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $primary-color;
+  margin: 0;
+
+  &--mini {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  &--big {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $secondary-color;
+
+    @include vp-tablet {
+      font-size: 64px;
+      line-height: 75px;
+    }
+
+    @include vp-mobile {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.accordion {
+  position: relative;
+}
+
+.accordion::before,
+.accordion::after {
+  @include vp-mobile {
+    content: "";
+
+    position: absolute;
+    right: 26px;
+    top: 20px;
+    width: 1px;
+    height: 15px;
+    background-color: #f8fdff;
+  }
+}
+
+.accordion::after {
+  transform: rotate(90deg);
+}
+
+.accordion.is-open::before {
+  transform: rotate(90deg);
+}
+
+.accordion__content {
+  @include vp-mobile {
+    display: none;
+  }
+}
+
+.accordion.is-open .accordion__content {
+  @include vp-mobile {
+    display: grid;
+  }
+}

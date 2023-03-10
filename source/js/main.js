@@ -48,3 +48,39 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+const accordion = document.querySelectorAll('[data-name="accordion"]');
+
+const closeAllElements = function() {
+  accordion.forEach(element => {
+    element.classList.remove('is-open')
+  })
+};
+
+  accordion.forEach(element => {
+    element
+      .querySelector('.accordion__title')
+      .addEventListener('click', () => {
+        if (!element.classList.contains('is-open')) {
+          closeAllElements();
+        }
+        element.classList.toggle('is-open');
+      })
+  });
+
+const mainScreenButton = document.querySelector('[data-name="main-screen-button"]');
+
+const changeButtonText = () => {
+  if (window.innerWidth < 768) {
+    mainScreenButton.textContent = 'бесплатная консультация';
+  } else {
+    mainScreenButton.textContent = 'Получить бесплатную консультацию';
+  }
+}
+
+changeButtonText();
+
+window.addEventListener('resize', (e) => {
+  changeButtonText();
+})
+
