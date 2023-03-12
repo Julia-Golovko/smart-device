@@ -22,6 +22,70 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
   });
+
+  const accordion = document.querySelectorAll('[data-name="accordion"]');
+
+  const closeAllElements = function () {
+    accordion.forEach(element => {
+      element.classList.remove('is-open');
+    });
+  };
+
+  accordion.forEach(element => {
+    element
+      .querySelector('.accordion__title')
+      .addEventListener('click', () => {
+        if (!element.classList.contains('is-open')) {
+          closeAllElements();
+        }
+        element.classList.toggle('is-open');
+      });
+  });
+
+  const mainScreenButton = document.querySelector('[data-name="main-screen-button"]');
+
+  const changeButtonText = () => {
+    if (window.innerWidth < 768) {
+      mainScreenButton.textContent = 'бесплатная консультация';
+    } else {
+      mainScreenButton.textContent = 'Получить бесплатную консультацию';
+    }
+  };
+
+  changeButtonText();
+
+  window.addEventListener('resize', (e) => {
+    changeButtonText();
+  });
+
+  const showMoreButton = document.querySelector('[data-name="about-button"]');
+  console.log(showMoreButton)
+  const moreText = document.querySelector('[data-name="about-text"]');
+  let maxHeight = '170px';
+
+  const showMoreText = () => {
+
+    if (window.innerWidth <= 1219 && window.innerWidth >= 768) {
+      maxHeight = '255px';
+    } else if (window.innerWidth <= 767) {
+      maxHeight = '200px';
+    }
+
+    moreText.style.maxHeight = maxHeight;
+
+    showMoreButton.addEventListener('click', () => {
+      console.log('click');
+
+      if (showMoreButton.textContent === 'Свернуть') {
+        moreText.style.maxHeight = maxHeight;
+        showMoreButton.textContent = 'Подробнее';
+      } else {
+        moreText.style.maxHeight = '100%';
+        showMoreButton.textContent = 'Свернуть';
+      }
+    });
+  };
+  showMoreText();
 });
 
 // ---------------------------------
@@ -49,38 +113,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // используйте .closest(el)
 
-const accordion = document.querySelectorAll('[data-name="accordion"]');
 
-const closeAllElements = function() {
-  accordion.forEach(element => {
-    element.classList.remove('is-open')
-  })
-};
-
-  accordion.forEach(element => {
-    element
-      .querySelector('.accordion__title')
-      .addEventListener('click', () => {
-        if (!element.classList.contains('is-open')) {
-          closeAllElements();
-        }
-        element.classList.toggle('is-open');
-      })
-  });
-
-const mainScreenButton = document.querySelector('[data-name="main-screen-button"]');
-
-const changeButtonText = () => {
-  if (window.innerWidth < 768) {
-    mainScreenButton.textContent = 'бесплатная консультация';
-  } else {
-    mainScreenButton.textContent = 'Получить бесплатную консультацию';
-  }
-}
-
-changeButtonText();
-
-window.addEventListener('resize', (e) => {
-  changeButtonText();
-})
 

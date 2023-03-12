@@ -6,14 +6,13 @@
 
   @include vp-tablet {
     padding: 40px 30px 35px 40px;
-    min-height: 360px;
+    min-height: unset;
   }
 
   @include vp-mobile {
     padding: 30px 30px 35px 25px;
-    min-height: 360px;
+    min-height: unset;
     font-size: 14px;
-    min-height: 340px;
   }
 
   svg {
