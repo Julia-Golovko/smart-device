@@ -49,6 +49,15 @@
       </header>
       <main class="main">
         <section class="main__main-screen main-screen">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/background-mobile@1x.webp 1x, img/background-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1219px)" srcset="img/background-tablet@1x.webp, img/background-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/background-desktop@1x.webp 1x, img/background-desktop@2x.webp 2x">
+
+            <source media="(max-width: 767px)" srcset="img/background-mobile@1x.jpg 1x, img/background-mobile@2x.jpg 2x">
+            <source media="(max-width: 1219px)" srcset="img/background-tablet@1x.jpg 1x, img/background-tablet@2x.jpg 2x">
+            <img src="../img/background-desktop@1x.jpg" srcset="img/background-desktop@1x.jpg 1x, img/background-desktop@2x.jpg 2x" width="1920" height="880" alt="Фоновое изображение">
+          </picture>
           <div class="container">
             <div class="main-screen__wrapper">
               <h1 class="visually-hidden">Интернет-магазин печатных плат</h1>
