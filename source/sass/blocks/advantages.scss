@@ -1,0 +1,29 @@
+.advantages__wrapper {
+  padding: 120px 0 60px;
+
+  @include vp-tablet {
+    padding: 80px 40px 40px;
+  }
+
+  @include vp-mobile {
+    padding: 50px 15px 25px;
+  }
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 31px;
+  row-gap: 30px;
+
+  @include vp-tablet {
+    gap: 30px;
+  }
+
+  @include vp-mobile {
+    grid-template-columns: 1fr;
+  }
+}
