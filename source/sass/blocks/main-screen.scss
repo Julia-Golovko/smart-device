@@ -24,12 +24,12 @@
   flex-direction: column;
   gap: 40px;
 
-  @include vp-tablet {
+  @include vp-1023 {
     padding: 180px 0 205px 40px;
     gap: 20px;
   }
 
-  @include vp-tablet {
+  @include vp-1023 {
     padding: 150px 15px 190px 15px;
     margin-right: auto;
     width: 100%;
@@ -45,11 +45,11 @@
   color: $secondary-color;
   max-width: 685px;
 
-  @include vp-tablet {
+  @include vp-1023 {
     max-width: 670px;
   }
 
-  @include vp-mobile {
+  @include vp-767 {
     max-width: 271px;
     font-weight: 400;
     font-size: 14px;
@@ -65,12 +65,12 @@
   width: max-content;
   border: none;
 
-  @include vp-tablet {
+  @include vp-1023 {
     margin-left: 45px;
     margin-top: 30px;
   }
 
-  @include vp-mobile {
+  @include vp-767 {
     font-size: 14px;
     line-height: 16px;
     margin-left: 0;

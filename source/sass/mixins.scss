@@ -50,18 +50,6 @@
 
 // Desktop first
 
-@mixin vp-tablet {
-  @media (max-width: (1219px)) {
-    @content;
-  }
-}
-
-@mixin vp-mobile {
-  @media (max-width: (767px)) {
-    @content;
-  }
-}
-
 @mixin vp-1919 {
   @media (max-width: ($vp-1920 - 1px)) {
     @content;

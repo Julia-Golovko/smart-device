@@ -4,12 +4,12 @@
   padding: 40px 45px 30px 40px;
   min-height: 300px;
 
-  @include vp-tablet {
+  @include vp-1023 {
     padding: 40px 30px 35px 40px;
     min-height: unset;
   }
 
-  @include vp-mobile {
+  @include vp-767 {
     padding: 30px 30px 35px 25px;
     min-height: unset;
     font-size: 14px;
@@ -19,7 +19,7 @@
     fill: $other-color;
     margin-bottom: 20px;
 
-    @include vp-tablet {
+    @include vp-1023 {
       margin-bottom: 0;
     }
   }
@@ -28,14 +28,14 @@
     margin-bottom: 15px;
     color: $other-color;
 
-    @include vp-mobile {
+    @include vp-767 {
       font-size: 20px;
       line-height: 28px;
     }
   }
 
   span {
-    @include vp-mobile {
+    @include vp-767 {
       line-height: 19px;
     }
   }
@@ -47,7 +47,7 @@
   padding-left: 44px;
   color: $secondary-color;
 
-  @include vp-mobile {
+  @include vp-767 {
     padding-left: 30px;
   }
 

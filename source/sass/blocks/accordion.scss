@@ -4,7 +4,7 @@
 
 .accordion::before,
 .accordion::after {
-  @include vp-mobile {
+  @include vp-767 {
     content: "";
 
     position: absolute;
@@ -25,13 +25,13 @@
 }
 
 .accordion__content {
-  @include vp-mobile {
+  @include vp-767 {
     display: none;
   }
 }
 
 .accordion.is-open .accordion__content {
-  @include vp-mobile {
+  @include vp-767 {
     display: grid;
   }
 }

@@ -6,9 +6,9 @@
   color: $primary-color;
   margin: 0;
 
-  @include vp-mobile {
+  @include vp-767 {
     font-size: 28px;
-    line-height: 39px;
+    line-height: 39px ;
   }
 
   &--mini {
@@ -24,12 +24,12 @@
     text-transform: uppercase;
     color: $secondary-color;
 
-    @include vp-tablet {
+    @include vp-1023 {
       font-size: 64px;
       line-height: 75px;
     }
 
-    @include vp-mobile {
+    @include vp-767 {
       font-size: 36px;
       line-height: 42px;
     }
