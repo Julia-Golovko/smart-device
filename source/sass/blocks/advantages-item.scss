@@ -5,28 +5,39 @@
   min-height: 300px;
 
   @include vp-1023 {
-    padding: 40px 30px 35px 40px;
+    padding: 40px 30px 28px 39px;
     min-height: unset;
   }
 
   @include vp-767 {
-    padding: 30px 30px 35px 25px;
-    min-height: unset;
+    padding: 30px 30px 73px 25px;
+    min-height: 325px;
+    max-height: 340px;
     font-size: 14px;
   }
 
   svg {
     fill: $other-color;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     @include vp-1023 {
-      margin-bottom: 0;
+      margin-bottom: 9px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 8px;
+      width: 30px;
+      height: 30px;
     }
   }
 
   h3 {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: $other-color;
+
+    @include vp-1023 {
+      margin-bottom: 8px;
+    }
 
     @include vp-767 {
       font-size: 20px;
@@ -37,6 +48,7 @@
   span {
     @include vp-767 {
       line-height: 19px;
+      display: inline-block;
     }
   }
 }

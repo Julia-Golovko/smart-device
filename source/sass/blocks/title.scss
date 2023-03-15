@@ -5,6 +5,7 @@
   line-height: 51px;
   color: $primary-color;
   margin: 0;
+  letter-spacing: 0.02em;
 
   @include vp-767 {
     font-size: 28px;
@@ -19,8 +20,8 @@
   &--big {
     font-weight: 700;
     font-size: 80px;
-    line-height: 94px;
-    letter-spacing: 0.07em;
+    line-height: 86px;
+    letter-spacing: 0.095em;
     text-transform: uppercase;
     color: $secondary-color;
 

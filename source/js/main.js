@@ -54,30 +54,39 @@ window.addEventListener('DOMContentLoaded', () => {
 
   changeButtonText();
 
+  const catalogTitle = document.querySelector('[data-name="catalog-title"]');
+
+  const changeTitleText = () => {
+    if (window.innerWidth < 768) {
+      catalogTitle.textContent = 'Товары и услуги Smart Device';
+    } else {
+      catalogTitle.textContent = 'Smart Device предлагает следующие товары и услуги';
+    }
+  }
+
+  changeTitleText();
+
   window.addEventListener('resize', (e) => {
     changeButtonText();
+    changeTitleText();
   });
 
   const showMoreButton = document.querySelector('[data-name="about-button"]');
-  console.log(showMoreButton)
   const moreText = document.querySelector('[data-name="about-text"]');
-  let maxHeight = '170px';
+  let maxHeight = 170;
 
   const showMoreText = () => {
-
     if (window.innerWidth <= 1219 && window.innerWidth >= 768) {
-      maxHeight = '255px';
+      maxHeight = 255;
     } else if (window.innerWidth <= 767) {
-      maxHeight = '200px';
+      maxHeight = 205;
     }
 
-    moreText.style.maxHeight = maxHeight;
+    moreText.style.maxHeight = maxHeight + 'px';
 
     showMoreButton.addEventListener('click', () => {
-      console.log('click');
-
       if (showMoreButton.textContent === 'Свернуть') {
-        moreText.style.maxHeight = maxHeight;
+        moreText.style.maxHeight = maxHeight + 'px';
         showMoreButton.textContent = 'Подробнее';
       } else {
         moreText.style.maxHeight = '100%';
