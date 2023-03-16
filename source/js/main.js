@@ -95,6 +95,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
   showMoreText();
+
+  const form = document.querySelector('#form');
+
+  // form.onsubmit = () => {
+  //   console.log(form)
+  // }
 });
 
 // ---------------------------------
@@ -121,6 +127,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
-
-

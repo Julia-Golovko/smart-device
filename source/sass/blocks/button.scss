@@ -11,4 +11,14 @@
   border-width: 1px;
   border-color: $primary-color;
   display: block;
+  user-select: none;
+}
+
+.button:hover {
+  opacity: 80%;
+}
+
+.button:focus,
+.button:active, {
+  opacity: 60%;
 }

@@ -57,6 +57,7 @@
   color: $other-color;
   padding: 14px 13px;
   min-width: 180px;
+  cursor: pointer;
 
   @include vp-1023 {
     margin-top: 23px;
@@ -67,5 +68,9 @@
     padding: 8px;
     min-width: 160px;
   }
-}
 
+  &:hover {
+    background-color: $other-color;
+    color: #ffffff;
+  }
+}

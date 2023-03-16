@@ -57,10 +57,12 @@
   }
 
   &__content {
-    position: relative;
+    position: absolute;
+    top: 146px;
+    margin-left: -12px;
 
     width: 500px;
-    padding: 40px;
+    padding: 38px 40px;
 
     background-color: $other-color;
 
@@ -135,6 +137,7 @@
   .form__inputs-wrapper {
     grid-template-columns: 1fr;
     margin-top: 40px;
+    margin-bottom: 16px;
   }
 
   .form__buttons-wrapper {

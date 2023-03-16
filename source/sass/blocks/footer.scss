@@ -50,6 +50,15 @@
   @include vp-1023 {
     margin-top: 2px;
   }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .footer__social-list {
@@ -73,6 +82,16 @@
     padding: 5px;
     display: block;
     height: 40px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:focus,
+    &:active {
+      transform: scale(1);
+      opacity: 80%;
+    }
   }
 }
 
@@ -110,6 +129,7 @@
   list-style-type: none;
   padding: 0;
   margin: 24px 30px 0 0;
+  user-select: none;
 
   @include vp-1023 {
     grid-template-columns: 1fr;
@@ -131,6 +151,16 @@
   li {
     width: 220px;
   }
+}
+
+.footer__nav-list li:hover a {
+  color: $other-color;
+}
+
+.footer__nav-list li:focus a,
+.footer__nav-list li:active a {
+  color: $other-color;
+  opacity: 60%;
 }
 
 .footer__contacts {
@@ -179,5 +209,14 @@
 .footer__phone-link {
   display: block;
   opacity: 70%;
-}
 
+  &:hover {
+    color: $other-color;
+  }
+
+  &:focus,
+  &:active {
+    color: $other-color;
+    opacity: 60%;
+  }
+}
