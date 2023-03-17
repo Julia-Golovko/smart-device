@@ -1,0 +1,221 @@
+.feedback {
+  background: $other-color url("../img/polygon.png") -6px -74px no-repeat;
+
+  @include vp-1023 {
+    background: $other-color;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 165px 10px 250px 628px;
+  background-image: url("../img/paper-airplane@1x.png");
+  background-repeat: no-repeat;
+  background-position-y: 246px;
+  color: #ffffff;
+
+  @include vp-1023 {
+    background-image: unset;
+    padding: 44px 41px 125px;
+  }
+
+  @include vp-767 {
+    padding: 47px 15px 90px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 35px;
+
+    @include vp-1023 {
+      margin-bottom: 25px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 34px;
+    }
+  }
+
+  .feedback__title {
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+
+    @include vp-1023 {
+      margin-bottom: 7px;
+      letter-spacing: 0.01em;
+    }
+
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.form__inputs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  margin-bottom: 29px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    margin-bottom: 24px;
+  }
+
+
+  input {
+    width: 100%;
+    background: rgba(4, 20, 39, 0.15);
+    border-radius: 3px;
+    border: unset;
+    padding: 16px;
+    margin-bottom: 20px;
+    user-select: none;
+
+    @include vp-1023 {
+      padding: 15px 15px 16px;
+    }
+
+    &:hover {
+      outline: 1px solid #ffffff;
+    }
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+}
+
+.form__text-wrapper {
+  grid-column: 1/-1;
+
+  textarea {
+    padding: 25px 15px 20px;
+    width: 100%;
+    background-color: rgba(4, 20, 39, 0.15);
+    border-radius: 3px;
+    border: unset;
+
+    &:hover {
+      outline: 1px solid #ffffff;
+    }
+
+    @include vp-1023 {
+      padding: 33px 15px 12px;
+    }
+
+    @include vp-767 {
+      height: 180px;
+      padding-top: 26px;
+    }
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+}
+
+
+.form__buttons-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  @include vp-1023 {
+    gap: 29px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  button {
+    padding: 15px 25px;
+    border: unset;
+    background: #041427;
+    border-radius: 3px;
+    min-width: 183px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @include vp-1023 {
+      padding: 18px 25px 13px;
+      max-width: 265px;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+    }
+  }
+
+  label {
+    margin-right: 5px;
+    display: flex;
+    vertical-align: bottom;
+    align-items: end;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 80%;
+    padding-left: 26px;
+    position: relative;
+
+    @include vp-1023 {
+      margin-top: 6px;
+      align-items: center;
+    }
+
+    @include vp-767 {
+      padding-left: 31px;
+      margin-right: 0;
+    }
+
+    span {
+      position: absolute;
+      border-radius: 2px;
+      border: 1px solid #ffffff;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      bottom: 8px;
+
+      @include vp-1023 {
+        bottom: 14px;
+      }
+
+      @include vp-767 {
+        bottom: 9px;
+        left: 5px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.form__buttons-wrapper input:focus + span {
+  outline: 2px solid #000000;
+}
+
+.form__buttons-wrapper input:checked + span::before {
+  content: "";
+
+  position: absolute;
+  width: 7px;
+  height: 6px;
+  top: 3px;
+  left: 2px;
+  background-image: url("../img/svg/check.svg");
+}
