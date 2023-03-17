@@ -58,6 +58,7 @@
   position: relative;
   background-color: #224b6e;
   user-select: none;
+  transition: ease 0.5s;
 
   @include vp-1023 {
     padding: 39px 395px 155px 45px;

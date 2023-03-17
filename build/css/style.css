@@ -1611,6 +1611,9 @@ button,
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: ease 0.5s;
+  -o-transition: ease 0.5s;
+  transition: ease 0.5s;
 }
 @media (max-width: 1023px) {
   .catalog__item a {
@@ -1874,6 +1877,9 @@ button,
     margin-bottom: 24px;
   }
 }
+.form__inputs-wrapper label {
+  position: relative;
+}
 .form__inputs-wrapper input {
   width: 100%;
   background: rgba(4, 20, 39, 0.15);
@@ -2022,7 +2028,8 @@ button,
     margin-right: 0;
   }
 }
-.form__buttons-wrapper label span {
+
+.form__buttons-wrapper input + span {
   position: absolute;
   border-radius: 2px;
   border: 1px solid #ffffff;
@@ -2032,17 +2039,17 @@ button,
   bottom: 8px;
 }
 @media (max-width: 1023px) {
-  .form__buttons-wrapper label span {
+  .form__buttons-wrapper input + span {
     bottom: 14px;
   }
 }
 @media (max-width: 767px) {
-  .form__buttons-wrapper label span {
+  .form__buttons-wrapper input + span {
     bottom: 9px;
     left: 5px;
   }
 }
-.form__buttons-wrapper label span:hover {
+.form__buttons-wrapper input + span:hover {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -2060,6 +2067,22 @@ button,
   top: 3px;
   left: 2px;
   background-image: url("../img/svg/check.svg");
+}
+
+.input-message.is-invalid {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  line-height: 12px;
+  font-size: 10px;
+  color: #ff1553;
+  opacity: 100%;
+  background-color: #ffffff;
+  padding: 2px 5px;
+}
+
+.intro a {
+  color: #041827;
 }
 
 /* @mixin hover-focus {

@@ -85,8 +85,6 @@ const onPhoneInputBlur = ({target}) => {
 
 export const initPhoneInput = (parent) => {
   const input = parent.querySelector('input');
-  console.log(parent)
-  console.log(input)
   parent.dataset.phoneLength = phoneLength;
   input.addEventListener('focus', onPhoneInputFocus);
 };

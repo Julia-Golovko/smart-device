@@ -95,12 +95,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
   showMoreText();
-
-  const form = document.querySelector('#form');
-
-  // form.onsubmit = () => {
-  //   console.log(form)
-  // }
 });
 
 // ---------------------------------
