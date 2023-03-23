@@ -53,6 +53,8 @@
     width: 100%;
     height: 100%;
 
+    background-color: rgba(3, 16, 27, 0.7);
+
     cursor: pointer;
   }
 
@@ -100,6 +102,11 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      transform: rotate(360deg);
+      transition: ease 0.5s;
+    }
   }
 
   &--responsive {
@@ -146,11 +153,13 @@
 
     button {
       padding: 15px 60px;
+      order: 1;
     }
 
     label {
       padding-left: 34px;
       line-height: 20px;
+      order: 10;
 
       span {
         bottom: 5px;

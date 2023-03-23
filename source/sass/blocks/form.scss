@@ -92,6 +92,7 @@
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    order: 1;
 
     @include vp-1023 {
       padding: 18px 25px 13px;
@@ -113,6 +114,8 @@
     opacity: 80%;
     padding-left: 26px;
     position: relative;
+    cursor: pointer;
+    order: 10;
 
     @include vp-1023 {
       margin-top: 6px;
@@ -120,8 +123,13 @@
     }
 
     @include vp-767 {
-      padding-left: 31px;
-      margin-right: 0;
+      margin-right: 7px;
+      padding-left: 28px;
+      align-content: center;
+    }
+
+    &:hover > span {
+      transform: scale(1.2);
     }
   }
 }
@@ -134,14 +142,14 @@
   height: 15px;
   left: 0;
   bottom: 8px;
+  cursor: pointer;
 
   @include vp-1023 {
     bottom: 14px;
   }
 
   @include vp-767 {
-    bottom: 9px;
-    left: 5px;
+    bottom: calc(50% - 7.5px);
   }
 
   &:hover {

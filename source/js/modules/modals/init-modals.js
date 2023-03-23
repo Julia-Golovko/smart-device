@@ -19,7 +19,7 @@ const settings = {
     stopPlay: true,
     lockFocus: true,
     startFocus: true,
-    focusBack: true,
+    focusBack: false,
     eventTimeout: 400,
     openCallback: false,
     closeCallback: false,

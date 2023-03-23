@@ -80,6 +80,7 @@
 .header__button {
   border-color: $secondary-color;
   margin-right: 60px;
+  max-width: 160px;
 
   @include vp-1023 {
     display: none;

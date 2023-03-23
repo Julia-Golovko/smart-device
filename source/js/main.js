@@ -73,28 +73,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const showMoreButton = document.querySelector('[data-name="about-button"]');
   const moreText = document.querySelector('[data-name="about-text"]');
-  let maxHeight = 170;
+  const moreTextMobile = document.querySelector('[data-name="about-mobile-text"]');
+  moreText.style.display = 'none';
+  moreTextMobile.style.display = 'block';
 
-  const showMoreText = () => {
-    if (window.innerWidth <= 1219 && window.innerWidth >= 768) {
-      maxHeight = 255;
-    } else if (window.innerWidth <= 767) {
-      maxHeight = 205;
+  if (window.innerWidth <= 767) {
+    moreTextMobile.style.display = 'none';
+  }
+
+  showMoreButton.addEventListener('click', () => {
+    if (moreText.style.display === 'block' && window.innerWidth >= 768) {
+      showMoreButton.textContent = 'Подробнее';
+      moreText.style.display = 'none';
+    } else if (window.innerWidth <= 767 && moreTextMobile.style.display === 'block') {
+      moreTextMobile.style.display = 'none';
+      moreText.style.display = 'none';
+      showMoreButton.textContent = 'Подробнее';
+    } else {
+      moreText.style.display = 'block';
+      showMoreButton.textContent = 'Свернуть';
+      moreTextMobile.style.display = 'block';
     }
-
-    moreText.style.maxHeight = maxHeight + 'px';
-
-    showMoreButton.addEventListener('click', () => {
-      if (showMoreButton.textContent === 'Свернуть') {
-        moreText.style.maxHeight = maxHeight + 'px';
-        showMoreButton.textContent = 'Подробнее';
-      } else {
-        moreText.style.maxHeight = '100%';
-        showMoreButton.textContent = 'Свернуть';
-      }
-    });
-  };
-  showMoreText();
+  })
 });
 
 // ---------------------------------

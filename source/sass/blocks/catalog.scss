@@ -5,7 +5,7 @@
 .catalog__wrapper {
   padding: 64px 0 140px;
 
-  @include vp-1023 {
+  @include vp-1439 {
     padding: 54px 39px 75px;
   }
 
@@ -44,15 +44,21 @@
   }
 
   @include vp-767 {
-    gap: 30px;
+    gap: 28px;
   }
 }
 
 .catalog__item a {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 50px 80px 543px 40px;
+  padding: 50px 80px 40px 40px;
   height: 100%;
+  min-height: 650px;
   display: block;
   width: 100%;
   position: relative;
@@ -62,10 +68,13 @@
 
   @include vp-1023 {
     padding: 39px 395px 155px 45px;
+    min-height: 250px;
   }
 
   @include vp-767 {
     padding: 28px 90px 164px 30px;
+    font-size: 18px;
+    line-height: 30px;
   }
 
   &:hover {
@@ -95,7 +104,7 @@
       }
     }
 
-    @include vp-767 {
+    @include vp-374 {
       background-image: url("../img/catalog/production-mobile@1x.jpg");
 
       @media (min-resolution: 2dppx) {
@@ -119,7 +128,7 @@
       }
     }
 
-    @include vp-767 {
+    @include vp-374 {
       background-image: url("../img/catalog/montage-mobile@1x.jpg");
 
       @media (min-resolution: 2dppx) {
@@ -143,7 +152,7 @@
       }
     }
 
-    @include vp-767 {
+    @include vp-374 {
       background-image: url("../img/catalog/components-mobile@1x.jpg");
 
       @media (min-resolution: 2dppx) {

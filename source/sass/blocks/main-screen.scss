@@ -9,7 +9,7 @@
     width: 100%;
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: 100%;
       margin: 0 auto;
       top: 0;
@@ -30,11 +30,12 @@
     padding: 178px 41px 206px;
     margin-right: auto;
     width: 100%;
-    gap: 8px;
+    gap: 2px;
   }
 
   @include vp-767 {
     padding: 149px 15px 189px;
+    gap: 8px;
   }
 }
 
@@ -67,11 +68,13 @@
   margin-top: 9px;
   background-color: $other-color;
   width: max-content;
+  max-width: 720px;
   border: none;
 
   @include vp-1023 {
     margin-left: 44px;
     margin-top: 56px;
+    max-width: 420px;
   }
 
   @include vp-767 {
@@ -79,6 +82,7 @@
     line-height: 16px;
     margin-left: 0;
     margin-top: 36px;
-    padding: 12px 38px;
+    padding: 11px 38px;
+    max-width: 280px;
   }
 }
