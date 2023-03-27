@@ -1,4 +1,5 @@
 import {Modals} from './modals';
+import {FocusLock} from '../../utils/focus-lock';
 
 let modals;
 
@@ -13,6 +14,14 @@ let modals;
 //   openModalInCloseCallback('modal-5');
 // },
 
+const fixModalFocus = () => {
+  const focusLock = new FocusLock();
+
+  setTimeout(() => {
+    focusLock.lock('.modal.is-active', true);
+  }, 100);
+}
+
 const settings = {
   'default': {
     preventDefault: true,
@@ -21,7 +30,7 @@ const settings = {
     startFocus: true,
     focusBack: false,
     eventTimeout: 400,
-    openCallback: false,
+    openCallback: fixModalFocus,
     closeCallback: false,
   },
 };

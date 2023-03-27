@@ -26,7 +26,7 @@
           <div class="header__contacts">
             <div class="header__email">
               <a href="mailto:info@sd.ru">
-                <svg width="20" height="20" role="img" fill="currentColor">
+                <svg width="20" height="20" role="img" fill="currentColor" aria-label="Напишите нам">
                   <use xlink:href="img/sprite.svg#email"></use>
                 </svg>
                 <span>info@sd.ru</span>
@@ -34,7 +34,7 @@
             </div>
             <div class="header__phone">
               <a href="tel:+74950005252">
-                <svg width="20" height="20" role="img" fill="currentColor">
+                <svg width="20" height="20" role="img" fill="currentColor" aria-label="Позвоните нам">
                   <use xlink:href="img/sprite.svg#phone"></use>
                 </svg>
                 <span>+7 (495) 000 52 52</span>
@@ -111,28 +111,24 @@
           <div class="about__wrapper">
             <picture>
               <source type="image/webp" srcset="img/year@1x.webp 1x, img/year@2x.webp 2x">
-              <img src="img/year@1x.jpg" srcset="img/year@1x.jpg 1x, img/year@2x.jpg 2x" width="150" height="320" alt="2022 год">
+              <img src="img/year@1x.png" srcset="img/year@1x.png 1x, img/year@2x.png 2x" width="150" height="320" alt="2022 год">
             </picture>
             <div class="about__content-wrapper">
               <h2 class="about__title title">О компании</h2>
-              <p class="about__desc">
+              <p class="about__desc" data-more-text>
                 Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с
                 1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.<br>
                 <br>
                 Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>
-                <span data-name="about-mobile-text">
                     Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
                   РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
                   России.<br>
-                </span>
-                <span data-name="about-text">
                 <br>
                   Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых
                 продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране
                 и&nbsp;20&nbsp;городов присутствия.
                 Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании.
                 Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов
-                </span>
               </p>
               <button class="button about__button" data-name="about-button">Подробнее</button>
             </div>
@@ -302,7 +298,7 @@
             <div class="form__inputs-wrapper">
               <label for="modal-name" data-focus data-validate-type="text" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <span class="visually-hidden">Имя</span>
-                <input type="text" id="modal-name" name="name" placeholder="Имя" required autofocus>
+                <input type="text" id="modal-name" name="name" placeholder="Имя" required>
               </label>
               <label for="modal-phone" data-validate-type="phone" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <span class="visually-hidden">Телефон</span>

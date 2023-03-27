@@ -51,7 +51,7 @@
 }
 
 .about__button {
-  margin-top: 43px;
+  margin-top: 20px;
   background-color: transparent;
   border: 1px solid $other-color;
   border-radius: 3px;
@@ -61,11 +61,11 @@
   cursor: pointer;
 
   @include vp-1023 {
-    margin-top: 26px;
+    margin-top: 22px;
   }
 
   @include vp-767 {
-    margin-top: 15px;
+    margin-top: 14px;
     padding: 8px;
     min-width: 160px;
   }

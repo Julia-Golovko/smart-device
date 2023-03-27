@@ -634,6 +634,7 @@ button,
   color: #ffffff;
   font-size: 30px;
   line-height: 42px;
+  letter-spacing: 0.01em;
 }
 .modal__content .modal__title + p {
   margin: 0;
@@ -641,8 +642,8 @@ button,
 }
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 17px;
+  right: 16px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -691,8 +692,8 @@ button,
 .modal .form__inputs-wrapper {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  margin-top: 40px;
-  margin-bottom: 16px;
+  margin-top: 37px;
+  margin-bottom: 19px;
 }
 .modal .form__buttons-wrapper {
   -ms-grid-columns: 1fr;
@@ -948,7 +949,7 @@ button,
 }
 @media (max-width: 1439px) {
   .footer__socials {
-    margin-right: 30px;
+    margin-right: 20px;
   }
 }
 @media (max-width: 1023px) {
@@ -1279,7 +1280,7 @@ button,
 }
 @media (max-width: 767px) {
   .main-screen__wrapper {
-    padding: 149px 15px 189px;
+    padding: 149px 15px 191px;
     gap: 8px;
   }
 }
@@ -1553,7 +1554,7 @@ button,
 }
 
 .about__button {
-  margin-top: 43px;
+  margin-top: 20px;
   background-color: transparent;
   border: 1px solid #00b2ff;
   border-radius: 3px;
@@ -1564,12 +1565,12 @@ button,
 }
 @media (max-width: 1023px) {
   .about__button {
-    margin-top: 26px;
+    margin-top: 22px;
   }
 }
 @media (max-width: 767px) {
   .about__button {
-    margin-top: 15px;
+    margin-top: 14px;
     padding: 8px;
     min-width: 160px;
   }
@@ -1588,7 +1589,7 @@ button,
 }
 @media (max-width: 1439px) {
   .catalog__wrapper {
-    padding: 54px 39px 75px;
+    padding: 55px 39px 75px;
   }
 }
 @media (max-width: 767px) {
@@ -1610,7 +1611,7 @@ button,
 @media (max-width: 767px) {
   .catalog__title {
     padding-right: 20px;
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 }
 
@@ -1922,7 +1923,7 @@ button,
 }
 @media (max-width: 767px) {
   .feedback__wrapper {
-    padding: 47px 15px 90px;
+    padding: 46px 15px 90px;
   }
 }
 .feedback__wrapper p {
@@ -2131,7 +2132,7 @@ button,
 }
 @media (max-width: 767px) {
   .form__buttons-wrapper label {
-    margin-right: 7px;
+    margin-left: 4px;
     padding-left: 28px;
     -ms-flex-line-pack: center;
         align-content: center;

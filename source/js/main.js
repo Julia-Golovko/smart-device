@@ -72,27 +72,39 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const showMoreButton = document.querySelector('[data-name="about-button"]');
-  const moreText = document.querySelector('[data-name="about-text"]');
-  const moreTextMobile = document.querySelector('[data-name="about-mobile-text"]');
-  moreText.style.display = 'none';
-  moreTextMobile.style.display = 'block';
+  const moreText = document.querySelector('[data-more-text]');
 
-  if (window.innerWidth <= 767) {
-    moreTextMobile.style.display = 'none';
+  let textHeight;
+
+  const calcTextHeight = () => {
+    switch (true) {
+      case window.innerWidth >= 1024:
+        textHeight = '170px'
+        break;
+
+      case window.innerWidth >= 768:
+        textHeight = '255px';
+        break;
+
+      default:
+        textHeight = '209px';
+    }
+    moreText.style.height = textHeight;
   }
 
+  calcTextHeight();
+
+  window.addEventListener('resize', () => {
+    calcTextHeight();
+  })
+
   showMoreButton.addEventListener('click', () => {
-    if (moreText.style.display === 'block' && window.innerWidth >= 768) {
-      showMoreButton.textContent = 'Подробнее';
-      moreText.style.display = 'none';
-    } else if (window.innerWidth <= 767 && moreTextMobile.style.display === 'block') {
-      moreTextMobile.style.display = 'none';
-      moreText.style.display = 'none';
-      showMoreButton.textContent = 'Подробнее';
-    } else {
-      moreText.style.display = 'block';
+    if (showMoreButton.textContent === 'Подробнее') {
+      moreText.style.height = 'max-content';
       showMoreButton.textContent = 'Свернуть';
-      moreTextMobile.style.display = 'block';
+    } else {
+      showMoreButton.textContent = 'Подробнее';
+      moreText.style.height = textHeight;
     }
   })
 });

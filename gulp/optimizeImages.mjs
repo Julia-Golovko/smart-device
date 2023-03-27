@@ -6,6 +6,7 @@ import svgstore from 'gulp-svgstore';
 import pngQuant from 'imagemin-pngquant';
 import mozJpeg from 'imagemin-mozjpeg';
 import svgo from 'imagemin-svgo';
+import imgCompress from 'imagemin-jpeg-recompress';
 
 const sprite = () =>
   gulp
@@ -40,6 +41,18 @@ const optimizeJpg = () =>
   gulp
       .src('build/img/**/*.{jpg,jpeg}')
       .pipe(imagemin([mozJpeg({quality: 90, progressive: true})]))
+    .pipe(imagemin([
+      imgCompress({
+        loops: 4,
+        min: 70,
+        max: 80,
+        quality: 'high'
+      }),
+      imagemin.gifsicle(),
+      imagemin.optipng(),
+      imagemin.svgo(),
+      mozJpeg({quality: 90, progressive: true})
+    ]))
       .pipe(gulp.dest('build/img'));
 
 const optimizePng = () =>
