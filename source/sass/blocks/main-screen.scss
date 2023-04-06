@@ -21,10 +21,10 @@
 
 .main-screen__wrapper {
   width: max-content;
-  padding: 307px 0 280px 125px;
+  padding: 302px 0 282px 125px;
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 36px;
 
   @include vp-1023 {
     padding: 178px 41px 206px;

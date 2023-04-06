@@ -3,4 +3,12 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 10px;
+
+  @include vp-1279 {
+    padding: 0 30px;
+  }
+
+  @include vp-1023 {
+    padding: 0 10px;
+  }
 }
